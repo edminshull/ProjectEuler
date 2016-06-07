@@ -4,12 +4,14 @@ public class AnswersOneToHundred {
 
 	public static void main(String[] args) {
 		long count = 0;
-		// Question One modified
+		// Question One 
 		System.out.println("Question One");
 		sumMultiples(3, 5, 1000);
 
 		System.out.println("Question Two");
 		// Question Two
+		// will loop through the sequence but need to 
+		// break out before count is greater than 4 million
 		for (int i = 1; i <= 4000000; i++) {
 			if (fibonacciEven(i) % 2 == 0) {
 				count += fibonacciEven(i);
@@ -36,11 +38,13 @@ public class AnswersOneToHundred {
 	}
 
 	/**
-	 * Answer for question one
+	 * Answer method for question one
+	 * Here we need to find the natural numbers below (num3)
+	 * that are mutilples of (num1) and (num2)
 	 * 
-	 * @param num1
-	 * @param num2
-	 * @param num3
+	 * @param num1 - first multiple that will be used
+	 * @param num2 - second multiple that will be used
+	 * @param num3 - The number that the problem goes up to
 	 */
 	public static void sumMultiples(int num1, int num2, int num3) {
 		int count = 0;
@@ -58,7 +62,7 @@ public class AnswersOneToHundred {
 	/**
 	 * Fibonacci sequence for question two using recursion for the sequence
 	 * 
-	 * @param num
+	 * @param num - the number given to the sequence
 	 * @return
 	 */
 	public static long fibonacciEven(long num) {
@@ -72,7 +76,9 @@ public class AnswersOneToHundred {
 	}
 
 	/**
-	 * Question Three
+	 * Answer method for question three
+	 * we are given a number (num) and must work out
+	 * the largest prime factor for it
 	 * 
 	 * @param num
 	 */
@@ -92,10 +98,12 @@ public class AnswersOneToHundred {
 	}
 
 	/**
-	 * Question Four
+	 * Answer method for question four
+	 * We must find the largest palindrome number
+	 * from the product of two 3-digit numbers
 	 * 
-	 * @param num1
-	 * @param num2
+	 * @param num1 - upper boundry of problem (i.e in this case 999)
+	 * @param num2 - lower boundry of problem (i.e in this case 100)
 	 * @return
 	 */
 	public static int palindromeBuilder(int num1, int num2) {
@@ -120,9 +128,11 @@ public class AnswersOneToHundred {
 	}
 
 	/**
-	 * Question Five
+	 * Answer method for question five
+	 * We must find the smallest positive number that is 
+	 * evenly divisble by all the numbers from 1 to 20
 	 * 
-	 * @param num1
+	 * @param num1 - the number we want to stop the loop at
 	 */
 	public static void smallestNum(int num1) {
 		int value = 0;
